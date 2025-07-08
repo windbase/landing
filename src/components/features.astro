@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Visual Builder Interface",
+    description:
+      "Intuitive drag-and-drop interface with a three-panel layout and central canvas area for real-time design and preview.",
+    icon: "bx:bxs-layout",
+  },
+  {
+    title: "HTML Import & Export",
+    description:
+      "Bidirectional transformation between HTML code and internal builder representation. Import existing HTML or export complete designs.",
+    icon: "bx:bxs-file-export",
+  },
+  {
+    title: "Live Preview System",
+    description:
+      "Iframe-based live preview that renders components in real-time with interactive element selection and content editing.",
+    icon: "bx:bxs-show",
+  },
+  {
+    title: "No Code Required",
+    description:
+      "Design beautiful components without writing any code. Use templates from the catalog or start from scratch.",
+    icon: "bx:bxs-magic-wand",
+  },
+  {
+    title: "TailwindCSS Plugin Support",
+    description:
+      "Built-in support for popular TailwindCSS plugins including DaisyUI and Flowbite with custom configuration options.",
+    icon: "bx:bxs-extension",
+  },
+  {
+    title: "Responsive Design Tools",
+    description:
+      "Desktop and mobile preview modes with responsive design capabilities for creating layouts that work on all devices.",
+    icon: "bx:bxs-devices",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to build with TailwindCSS
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Windbase provides a complete visual development environment for TailwindCSS with powerful tools and seamless workflow.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
